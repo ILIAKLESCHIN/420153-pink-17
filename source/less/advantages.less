@@ -1,12 +1,37 @@
 .advantages {
-  background: rgb(255,255,255);
+  background: rgb(255, 255, 255);
+  width: 320px;
+  margin: 0 auto;
 }
+
 .advantages__promo {
   color: @color-text-secondary;
   font-size: 24px;
   font-weight: 300;
   font-family: @main-font-family;
 }
+
 .advantages__list {
   background: @color-secondary;
+}
+
+@media (min-width: @tablet-width) {
+  .advantages {
+    width: 660px;
+  }
+
+  .advantages__promo {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .advantages {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .advantages__promo {
+    font-size: 50px;
+  }
 }
