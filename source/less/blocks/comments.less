@@ -3,18 +3,14 @@
 }
 
 .comments__wrapper {
-  margin: 0 auto;
-  width: 320px;
-}
+  width: 100%;
 
-@media (min-width: @tablet-width) {
-  .comments__wrapper {
-    width: 660px;
+  @media (min-width: @tablet-width) {
+    width: 100%;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .comments__wrapper {
-    width: 940px;
+  @media (min-width: @desktop-width) {
+    width: @wrapper-width-desktop;
+    margin: 0 auto;
   }
 }

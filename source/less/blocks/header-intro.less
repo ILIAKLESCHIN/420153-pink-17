@@ -1,5 +1,5 @@
 .header-intro {
-  height: 396px;
+  min-height: 396px;
   background: transparent;
 
   & p {
@@ -10,37 +10,75 @@
     padding: 0;
     margin: 0;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .header-intro {
+  @media (min-width: @desktop-width) {
     width: 100%;
   }
+}
 
-  .header-intro__wrapper {
-    display: flex;
-    width: 940px;
-    margin: 0 auto;
+.header-intro__moto {
+  padding-top: 80px;
+  margin-bottom: 52px;
+  font-weight: 300;
+  font-size: 50px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.header-intro__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @desktop-width) {
     flex-direction: row;
+    width: @wrapper-width-desktop;
+    margin: 0 auto;
   }
+}
 
-  .header-intro__right-block {
+
+.header-intro__download-block {
+  min-height: 271px;
+  order: 3;
+  background-color: @color-main;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
     width: 300px;
+    height: 618px;
+    background-color: transparent;
+    z-index: 1;
   }
 
-  .header-intro__left-block {
-    width: 660px;
-    height: 644px;
-    background-image: url("../img/iphone-hand-desktop@1x.png");
+  @media (min-width: @desktop-width) {
+    width: 300px;
+    min-height: 748px;
+    order: 0;
+    background-color: transparent;
+  }
+}
+
+.header-intro__picture-block {
+  min-height: 396px;
+  width: 100%;
+  background: url("../../img/iphone-hand-mobile@1x.png") no-repeat;
+  background-position: 50% 109px;
+
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: absolute;
+    background: url("../../img/iphone-hand-tablet@1x.png") no-repeat;
     background-position: 50% 0;
+    min-height: 748px;
   }
 
-  .header-intro__moto {
-    padding-top: 80px;
-    margin-bottom: 52px;
-    font-weight: 300;
-    font-size: 50px;
-    line-height: 1.2;
-    text-align: center;
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 660px;
+    min-height: 745px;
+    background: url("../../img/iphone-hand-desktop@1x.png") no-repeat;
+    background-position: 66% 100px;
+    position: static;
   }
 }

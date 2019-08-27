@@ -1,39 +1,115 @@
 .main-nav {
-  width: 320px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 66px;
+  display: flex;
+
+
+  @media (min-width: @tablet-width) {
+    min-height: 110px;
+  }
 }
 
-.site-list__item a {
+.site-list__item {
+  text-align: center;
+  background-color: @color-menu;
+  border-bottom: 1px solid rgb(1, 1, 1);
+  border-top: 1px solid rgb(72, 84, 97);
+
+  @media (min-width: @desktop-width) {
+    background-color: transparent;
+    border: none;
+  }
+}
+
+.site-list__link {
+  display: block;
+  padding-top: 18px;
+  padding-bottom: 18px;
   color: @color-text;
   text-transform: uppercase;
   font-family: @main-font-family;
   font-weight: 700;
   font-size: 18px;
   line-height: 32px;
+
+  @media (min-width: @desktop-width) {
+    font-weight: 300;
+    text-transform: capitalize;
+    padding-left: 73px;
+  }
 }
 
 .site-list {
   list-style: none;
-  margin-top: 0;
   margin-bottom: 0;
-}
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  margin-top: 27px;
+  padding-left: 0;
 
-@media (min-width: @tablet-width) {
-  .main-nav {
+  @media (min-width: @desktop-width) {
+    flex-direction: row;
     width: 660px;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .main-nav__list {
-    display: flex;
-    justify-content: space-between;
-    width: 647px;
-    margin: 0 auto;
+.main-nav__wrapper {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    width: 100%;
   }
 
-  .main-nav__wrapper {
-    width: 940px;
+  @media (min-width: @desktop-width) {
+    width: @wrapper-width-desktop;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
   }
+}
+
+.main-nav__toggle {
+  display: block;
+  position: absolute;
+  border: none;
+  outline: none;
+  top: 0;
+  right: 0;
+  width: 200px;
+  min-height: 66px;
+  font-size: 0;
+  line-height: 0;
+  background-color: transparent;
+  z-index: 100;
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
+}
+
+.main-nav__toggle .icon-menu {
+  position: absolute;
+  top: 21px;
+  right: 0;
+  fill: rgb(255, 255, 255);
+}
+
+.main-nav__toggle:hover .icon-menu {
+  fill: @color-pink;
+}
+
+.icon-menu--cross,
+.main-nav__list--closed .icon-menu--burger {
+  display: none;
+}
+
+.main-nav__toggle--closed .icon-menu--cross {
+  display: block;
+}
+
+.main-nav__toggle:active .icon-menu {
+  opacity: 0.3;
 }
