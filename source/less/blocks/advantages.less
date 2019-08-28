@@ -1,5 +1,4 @@
 .advantages {
-  background: rgb(255, 255, 255);
   width: 100%;
 }
 
@@ -11,7 +10,6 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: @wrapper-width-desktop;
     margin: 0 auto;
   }
 }
@@ -38,6 +36,10 @@
   }
 }
 
-.advantages__list {
-  background: @color-secondary;
+.advantages__list-wrapper {
+  background-color: @color-secondary;
+  background-image: url("../img/bg-triangle-white.svg");
+  background-repeat: no-repeat;
+  background-size: 101% auto;
+  background-position: 50% 0;
 }

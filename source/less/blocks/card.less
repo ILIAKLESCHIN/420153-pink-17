@@ -2,7 +2,21 @@
 .card {
   font-family: @main-font-family;
   color: @color-text-secondary;
-  background: @color-secondary;
+  width: 280px;
+  min-height: 323px;
+
+  @media (min-width: @tablet-width) {
+    width: 300px;
+    min-height: 455px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 553px;
+  }
+}
+
+.card--top {
+  width: 100%;
 }
 
 .card__person-name {
@@ -26,4 +40,49 @@
   text-transform: uppercase;
   font-size: 12px;
   line-height: 24px;
+}
+
+.photo-stack__wrapper {
+  width: 100%;
+}
+
+.card__user-image {
+  width: 100%;
+}
+
+.photo-stack__wrapper-inside {
+  display: flex;
+  flex-wrap: wrap;
+  width: @wrapper-width-mobile;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @wrapper-width-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @wrapper-width-desktop;
+  }
+}
+
+.card__comment-wrapper {
+  background: @color-secondary;
+}
+
+.card__comment-wrapper--top {
+  width: @wrapper-width-mobile;
+  margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: @wrapper-width-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @wrapper-width-desktop;
+  }
+}
+
+.card-image {
+  padding: 0;
+  margin: 0;
 }

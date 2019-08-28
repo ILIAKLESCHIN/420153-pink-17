@@ -20,9 +20,23 @@
   padding-top: 80px;
   margin-bottom: 52px;
   font-weight: 300;
-  font-size: 50px;
+  font-size: 24px;
   line-height: 1.2;
   text-align: center;
+  position: absolute;
+  top: 9px;
+  left: 35px;
+  width: 300px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 40px;
+    position: static;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 50px;
+    position: static;
+  }
 }
 
 .header-intro__wrapper {
@@ -69,7 +83,7 @@
     display: block;
     position: absolute;
     background: url("../../img/iphone-hand-tablet@1x.png") no-repeat;
-    background-position: 50% 0;
+    background-position: 50% 73px;
     min-height: 748px;
   }
 
