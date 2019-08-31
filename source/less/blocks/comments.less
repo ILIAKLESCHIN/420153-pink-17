@@ -3,14 +3,111 @@
 }
 
 .comments__wrapper {
-  width: 100%;
+  width: @wrapper-width-mobile;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    width: 100%;
+    width: @wrapper-width-tablet;
+    margin-top: 70px;
   }
 
   @media (min-width: @desktop-width) {
     width: @wrapper-width-desktop;
-    margin: 0 auto;
+    margin-top: 190px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comments__wrapper::before {
+    content: "";
+    position: absolute;
+    width: 79px;
+    height: 64px;
+    background: url("../img/icon-quotes.svg");
+    top: -102px;
+    left: 431px;
+  }
+}
+
+.comments__content {
+  display: block;
+  font-size: 14px;
+  line-height: 30px;
+  margin-top: 12px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 100px;
+  }
+}
+
+.comments__item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+
+  &--comment-kolya {
+    display: none;
+  }
+
+  &--comment-vasya {
+    display: none;
+  }
+}
+
+.comments__inner-wrapper {
+  order: 0;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+  }
+}
+
+.comments__details {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+  }
+}
+
+.comments__slider {
+  position: relative;
+}
+
+.comments__toggle {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    position: absolute;
+    top: -170px;
+    width: 60px;
+    height: 42px;
+    font-size: 0;
+    line-height: 0;
+    border: none;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: 0 50%;
+    background-size: 22px 41px;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  &--prev {
+    left: 0;
+  }
+
+  &--next {
+    right: 0;
   }
 }

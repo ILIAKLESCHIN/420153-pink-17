@@ -1,0 +1,117 @@
+.science {
+  @media (min-width: @desktop-width) {
+    background: @color-secondary;
+  }
+}
+
+.science__wrapper {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    margin: 0 auto;
+    width: @wrapper-width-tablet;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @wrapper-width-desktop;
+  }
+}
+
+.science__container {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: block;
+    width: 328px;
+    padding-top: 32px;
+    min-height: 215px;
+    position: relative;
+    margin-left: 319px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: block;
+    width: 523px;
+    min-height: 197px;
+    margin-left: 367px;
+    margin-right: 50px;
+    padding-top: 105px;
+    padding-bottom: 115px;
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.science__container::before {
+  @media (min-width: @tablet-width) {
+    content: "24";
+    color: @color-pink;
+    font-weight: 700;
+    font-size: 96px;
+    line-height: 96px;
+    position: absolute;
+    text-align: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    z-index: 10;
+    width: 202px;
+    height: 202px;
+    padding-top: 33px;
+    left: -277px;
+    top: 63px;
+    border: 15px solid @color-pink;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 120px;
+    line-height: 120px;
+    width: 253px;
+    height: 253px;
+    top: 90px;
+    left: -361px;
+    border: 15px solid @color-pink;
+    padding-top: 46px;
+    background-color: @color-secondary;
+  }
+}
+
+.science__link {
+  font-size: 14px;
+  line-height: 24px;
+  color: #d22856;
+  text-decoration: underline;
+
+  @media (min-width: @desktop-width) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.science__timer {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    fill: rgb(222, 222, 222);
+    top: 7px;
+    left: -296px;
+    width: 238px;
+    height: 276px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 20px;
+    left: -384px;
+    width: 298px;
+    height: 345px;
+  }
+}
+
+
+.science__title {
+  @media (min-width: @desktop-width) {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+}

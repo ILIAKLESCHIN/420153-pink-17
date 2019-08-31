@@ -1,3 +1,37 @@
 .social-button-list {
   list-style: none;
 }
+
+.social-links__link {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  margin: 0 6px;
+  width: 47px;
+  height: 47px;
+  font-size: 0;
+  line-height: 0;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(233, 235, 236);
+  border-radius: 50%;
+}
+
+.social-icon {
+  position: absolute;
+  fill: @color-pink;
+
+  &--twitter {
+    left: 16px;
+    top: 16px;
+  }
+
+  &--facebook {
+    left: 19px;
+    top: 13px;
+  }
+
+  &--youtube {
+    left: 17px;
+    top: 16px;
+  }
+}
