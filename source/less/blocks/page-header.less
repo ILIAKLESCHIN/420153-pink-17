@@ -12,8 +12,7 @@
 }
 
 .page-header__wrapper {
-  min-width: @wrapper-width-mobile;
-  margin: 0 auto;
+  min-width: 100%;
   background: url("../img/bg-back-mobile@1x.jpg") no-repeat;
   background-size: 400px auto;
 
@@ -34,6 +33,17 @@
   }
 }
 
+.page-header__wrapper--cutline {
+  min-height: 237px;
+
+  @media (min-width: @tablet-width) {
+    min-height: 440px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 394px;
+  }
+}
 
 .page-header__logo {
   font-size: 0;

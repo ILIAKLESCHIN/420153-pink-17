@@ -1,0 +1,254 @@
+.feedback-form__main {
+  display: flex;
+  flex-direction: column;
+  padding-top: 45px;
+  padding-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+    margin: 0 auto;
+  }
+}
+
+.feedback-form__intro {
+  width: 280px;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  order: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 500px;
+    margin: 0 80px;
+    font-size: 18px;
+    box-sizing: border-box;
+  }
+}
+
+.feedback-form__field--name {
+  order: 2;
+
+  @media (min-width: @tablet-width) {
+    order: 0;
+  }
+}
+
+.feedback-form__intro span {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    display: inline;
+  }
+}
+
+.feedback-form__field {
+  width: 280px;
+  margin: 0 auto;
+  padding: 28px 0 30px;
+  box-sizing: border-box;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    width: 620px;
+    margin: 0 20px;
+  }
+}
+
+.feedback-form__item {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 52px;
+  }
+}
+
+.feedback-form__label {
+  display: block;
+  margin-bottom: 5px;
+  padding-left: 23px;
+  color: @color-pink;
+  text-transform: uppercase;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.feedback-form__label--caption {
+  padding-left: 0;
+  padding-right: 22px;
+  margin-bottom: 0;
+}
+
+.email,
+.tel,
+.text {
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 30px;
+  width: 100%;
+  border: 2px solid #e5e5e5;
+  border-radius: 2px;
+  padding: 14px 22px 15px;
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: auto;
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+}
+
+.feedback-form__app-choice-wrapper {
+  box-sizing: border-box;
+  min-height: 337px;
+  padding-top: 36px;
+  margin-bottom: 58px;
+  background-color: @color-secondary;
+  width: 100%;
+  order: 5;
+}
+
+.feedback-form__app-choice {
+  border: none;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.feedback-form__title {
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-align: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: #d22856;
+}
+
+.checkbox,
+.checkbox + .feedback-form__label--checkbox .icon-yes,
+.radio {
+  display: none;
+}
+
+input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.feedback-form__label--radio {
+  display: block;
+  position: relative;
+  font-size: 18px;
+  line-height: 30px;
+  padding-bottom: 20px;
+}
+
+.feedback-form__label--checkbox::before,
+.feedback-form__label--radio::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 35px;
+  height: 35px;
+  margin-right: 31px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(229, 229, 229);
+}
+
+.feedback-form__label--radio::before {
+  border-radius: 50%;
+}
+
+.radio + .feedback-form__label--radio:active::after,
+.radio:checked + .feedback-form__label--radio::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  top: 12px;
+  left: 12px;
+  background-color: #d22856;
+  border-radius: 50%;
+}
+
+.feedback-form--details {
+  padding-bottom: 39px;
+  order: 4;
+}
+
+.feedback-form__title--close {
+  display: none;
+}
+
+.checkbox + .feedback-form__label--checkbox:active .icon-yes,
+.checkbox:checked + .feedback-form__label--checkbox .icon-yes {
+  position: absolute;
+  display: block;
+  top: 9px;
+  left: 28px;
+  fill: #d22856;
+}
+
+.feedback-form__achievements-wrapper {
+  background-color: @color-secondary;
+  width: 100%;
+  box-sizing: border-box;
+  order: 3;
+}
+
+.feedback-form__label--checkbox {
+  margin-bottom: 11px;
+  display: block;
+  text-transform: none;
+  color: @color-text-secondary;
+  position: relative;
+}
+
+.feedback-form__field--emotion {
+  padding-top: 10px;
+  padding-bottom: 40px;
+  margin-top: 25px;
+  order: 6;
+}
+
+.textarea-text {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 201px;
+  margin-top: 6px;
+  padding-left: 21px;
+  padding-right: 21px;
+  padding-top: 15px;
+  border: 2px solid rgb(229, 229, 229);
+  border-radius: 2px;
+}
+
+.feedback-form__wrapper-inner--submit {
+  display: flex;
+  min-height: 128px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  order: 7;
+}
+
+.feedback-form__submit {
+  padding: 14px 44px;
+  font-size: 18px;
+  font-weight: 700;
+  color: @color-text;
+  border: 3px solid rgb(42, 171, 109);
+  border-radius: 3px;
+  background-color: rgb(42, 171, 109);
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.feedback-form__required {
+  font-size: 14px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
